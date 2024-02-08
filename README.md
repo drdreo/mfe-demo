@@ -11,9 +11,13 @@ Micro-frontends Architecture
 Instead of building a single monolithic application, we deconstruct it into multiple smaller parts, known as micro-frontends. It allows independent teams to work on isolated sections, promoting scalability and ease of development.
 
 ## Shell App
+
 The shell (or host) app is the core application from which all other remote applications are loaded. It acts as a container for the micro-frontends.
 
-`nx serve shell` to start the shell app.
+`npx nx serve shell` to start the shell app.
+
+`npx nx serve shell --devRemotes=brand-settings` to dev one app
 
 ## Remote Apps
+
 There are two remote apps in this project, which are separately loadable and deployable yet share the same lifecycle and state as the shell app. They are micro-frontends loaded by the shell app.

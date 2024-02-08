@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  gap: 150px;
+
+
+  .sidebar {
+    padding: 15px;
+
+    .brand {
+      padding: 15px;
+      font: {
+        size: 24px;
+        weight: bold;
+        family: 'Montserrat', sans-serif;
+      }
+    }
+  }
+}
+

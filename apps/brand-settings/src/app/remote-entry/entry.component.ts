@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { BrandSettingsComponent } from '../brand-settings/brand-settings.component';
 
 @Component({
-  standalone: true,
-  imports: [CommonModule, NxWelcomeComponent],
-  selector: 'mfe-demo-brand-settings-entry',
-  template: `<mfe-demo-nx-welcome></mfe-demo-nx-welcome>`,
+    standalone: true,
+    imports: [CommonModule, BrandSettingsComponent],
+    selector: 'mfe-demo-brand-settings-entry',
+    template: ` <mfe-demo-brand-settings></mfe-demo-brand-settings>`,
 })
 export class RemoteEntryComponent {}

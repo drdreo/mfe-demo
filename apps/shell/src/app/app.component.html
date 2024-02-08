@@ -1,7 +1,13 @@
-<ul class="remote-menu">
-  <li><a routerLink="/">Home</a></li>
-  <li><a routerLink="/">Creativesets</a></li>
-  <li><a routerLink="brand-settings">Brand Settings</a></li>
-  <li><a routerLink="creativeset-list">CreativesetList</a></li>
-</ul>
-<router-outlet></router-outlet>
+<div class="container">
+    <div class="sidebar">
+        <span [style.color]="color()" class="brand">Bannerflow</span>
+        <ul class="remote-menu">
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="brand-settings">Brand Settings</a></li>
+            <li><a routerLink="creativeset-list">Creativeset List</a></li>
+        </ul>
+    </div>
+    <div class="page">
+        <router-outlet></router-outlet>
+    </div>
+</div>
