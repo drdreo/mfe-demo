@@ -17,6 +17,9 @@
     "paths": {
       "brand-settings/Routes": [
         "apps/brand-settings/src/app/remote-entry/entry.routes.ts"
+      ],
+      "creativeset-list/Routes": [
+        "apps/creativeset-list/src/app/remote-entry/entry.routes.ts"
       ]
     }
   },

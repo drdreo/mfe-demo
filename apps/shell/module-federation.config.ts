@@ -14,7 +14,7 @@ const config: ModuleFederationConfig = {
    * declare module 'my-external-remote';
    *
    */
-  remotes: ['brand-settings'],
+  remotes: ['brand-settings', 'creativeset-list'],
 };
 
 export default config;
