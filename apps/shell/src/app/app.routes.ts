@@ -14,8 +14,10 @@ export const appRoutes: Route[] = [
     },
     {
         path: 'react-app',
-        // @ts-ignore
-        loadChildren: () => import('reactApp/Module').then((m) => m.default),
+        loadComponent: () =>
+            import('./react-wrapper/react-wrapper.component').then(
+                (m) => m.ReactWrapperComponent
+            ),
     },
     {
         path: '',
