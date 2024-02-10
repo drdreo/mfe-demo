@@ -1,10 +1,3 @@
-/*
- * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- This is a starter component and can be deleted.
- * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- Delete this file and get started with your project!
- * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- */
 export function NxWelcome({ title }: { title: string }) {
     return (
         <>
@@ -107,7 +100,7 @@ export function NxWelcome({ title }: { title: string }) {
     }
     #hero {
       align-items: center;
-      background-color: hsla(214, 62%, 21%, 1);
+      background-color: #8d1616;
       border: none;
       box-sizing: border-box;
       color: rgba(55, 65, 81, 1);
@@ -428,7 +421,7 @@ export function NxWelcome({ title }: { title: string }) {
                     <div id="welcome">
                         <h1>
                             <span> Hello from React, </span>
-                            Welcome {title} 👋
+                            Welcome &lt;{title}&gt; 👋
                         </h1>
                     </div>
 
