@@ -1,4 +1,4 @@
-import {ModuleFederationConfig} from '@nx/webpack';
+import { ModuleFederationConfig } from '@nx/webpack';
 
 const config: ModuleFederationConfig = {
     name: 'shell',
@@ -14,7 +14,11 @@ const config: ModuleFederationConfig = {
      * declare module 'my-external-remote';
      *
      */
-    remotes: ['brand-settings', 'creativeset-list', 'react-app'],
+    remotes: [
+        'brand-settings',
+        'creativeset-list',
+        ['reactApp', 'http://localhost:4203/remoteEntry.js'],
+    ],
 };
 
 export default config;

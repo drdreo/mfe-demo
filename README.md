@@ -6,13 +6,18 @@
 
 # MFE with NX - Overview
 
-This project adopts the cutting-edge technology of Webpack's Module Federation with NX, consolidating into a seamless workflow of micro-frontends architecture. It consists of a shell app and two remote apps, allowing isolated development, separate deployment, and shared state across the apps.
+This project adopts the cutting-edge technology of Webpack's Module Federation with NX, consolidating into a seamless
+workflow of micro-frontends architecture. It consists of a shell app and two remote apps, allowing isolated development,
+separate deployment, and shared state across the apps.
 Micro-frontends Architecture
-Instead of building a single monolithic application, we deconstruct it into multiple smaller parts, known as micro-frontends. It allows independent teams to work on isolated sections, promoting scalability and ease of development.
+Instead of building a single monolithic application, we deconstruct it into multiple smaller parts, known as
+micro-frontends. It allows independent teams to work on isolated sections, promoting scalability and ease of
+development.
 
 ## Shell App
 
-The shell (or host) app is the core application from which all other remote applications are loaded. It acts as a container for the micro-frontends.
+The shell (or host) app is the core application from which all other remote applications are loaded. It acts as a
+container for the micro-frontends.
 
 `npx nx serve shell` to start the shell app.
 
@@ -20,4 +25,8 @@ The shell (or host) app is the core application from which all other remote appl
 
 ## Remote Apps
 
-There are two remote apps in this project, which are separately loadable and deployable yet share the same lifecycle and state as the shell app. They are micro-frontends loaded by the shell app.
+There are three remote apps in this project, which are separately loadable and deployable yet share the same lifecycle
+and state as the shell app. They are micro-frontends loaded by the shell app.
+
+For the react example, run `nx run react-app:serve-static` which hosts the app decoupled from the other nx magic.
+

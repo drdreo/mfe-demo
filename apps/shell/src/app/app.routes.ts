@@ -1,5 +1,5 @@
-import {NxWelcomeComponent} from './nx-welcome.component';
-import {Route} from '@angular/router';
+import { NxWelcomeComponent } from './nx-welcome.component';
+import { Route } from '@angular/router';
 
 export const appRoutes: Route[] = [
     {
@@ -14,8 +14,8 @@ export const appRoutes: Route[] = [
     },
     {
         path: 'react-app',
-        loadChildren: () =>
-            import('react-app/Module').then((m) => m.remoteRoutes),
+        // @ts-ignore
+        loadChildren: () => import('reactApp/Module').then((m) => m.default),
     },
     {
         path: '',
