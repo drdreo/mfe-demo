@@ -13,7 +13,10 @@
             "!{projectRoot}/tsconfig.spec.json",
             "!{projectRoot}/jest.config.[jt]s",
             "!{projectRoot}/src/test-setup.[jt]s",
-            "!{projectRoot}/test-setup.[jt]s"
+            "!{projectRoot}/test-setup.[jt]s",
+            "!{projectRoot}/cypress/**/*",
+            "!{projectRoot}/**/*.cy.[jt]s?(x)",
+            "!{projectRoot}/cypress.config.[jt]s"
         ],
         "sharedGlobals": []
     },
@@ -60,6 +63,13 @@
                     "env": "NX_MF_DEV_SERVER_STATIC_REMOTES"
                 }
             ]
+        },
+        "@nx/webpack:webpack": {
+            "inputs": [
+                {
+                    "env": "NX_MF_DEV_SERVER_STATIC_REMOTES"
+                }
+            ]
         }
     },
     "generators": {
@@ -71,6 +81,21 @@
         },
         "@nx/angular:component": {
             "style": "scss"
+        },
+        "@nx/react": {
+            "application": {
+                "babel": true,
+                "style": "scss",
+                "linter": "eslint",
+                "bundler": "webpack"
+            },
+            "component": {
+                "style": "scss"
+            },
+            "library": {
+                "style": "scss",
+                "linter": "eslint"
+            }
         }
     }
 }

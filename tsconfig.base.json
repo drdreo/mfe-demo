@@ -23,7 +23,8 @@
             ],
             "creativeset-list/Routes": [
                 "apps/creativeset-list/src/app/remote-entry/entry.routes.ts"
-            ]
+            ],
+            "react-app/Module": ["apps/react-app/src/remote-entry.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]
