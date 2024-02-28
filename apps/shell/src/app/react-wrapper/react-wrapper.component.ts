@@ -23,7 +23,6 @@ export class ReactWrapperComponent implements AfterViewInit {
     }
 
     async ngAfterViewInit() {
-        debugger;
         // @ts-ignore
         const FederatedReactApp = await import('reactApp/Module').then(
             (m) => m.default

@@ -7,12 +7,24 @@
 # MFE with NX - Overview
 
 This project adopts the cutting-edge technology of Webpack's Module Federation with NX, consolidating into a seamless
-workflow of micro-frontends architecture. It consists of a shell app and two remote apps, allowing isolated development,
-separate deployment, and shared state across the apps.
-Micro-frontends Architecture
+workflow of micro-frontends architecture. It consists of a shell app and three remote apps, allowing isolated development,
+separate deployment, shared state across the apps and independent technology stacks.
+
+## Micro-frontends Architecture
 Instead of building a single monolithic application, we deconstruct it into multiple smaller parts, known as
-micro-frontends. It allows independent teams to work on isolated sections, promoting scalability and ease of
+micro-frontends. It is precisely what micro-services accomplished.
+
+It allows independent teams to work on isolated sections, promoting scalability and ease of
 development.
+
+## Case Studies
+Big companies like Uber love monorepos and microservices. So it's not far fetched that they also love micro frontends
+and module federation. 
+Another big case study is the German company Zalando, which has been using micro frontends for a while now.
+
+## Demo App Architecture.
+
+![img.png](img.png)
 
 ## Shell App
 
@@ -20,6 +32,8 @@ The shell (or host) app is the core application from which all other remote appl
 container for the micro-frontends.
 
 `npx nx serve shell` to start the shell app.
+
+BUT, first start the demo react-app `npx nx serve react-app`
 
 `npx nx serve shell --devRemotes=brand-settings` to dev one app
 
