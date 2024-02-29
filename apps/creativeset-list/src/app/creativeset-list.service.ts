@@ -13,11 +13,13 @@ export class CreativesetListService {
     }
 
     private initGlobalListeners() {
-        console.debug('initGlobalListeners');
+        console.log('[CreativesetListService] initGlobalListeners');
         fromEvent(window, 'brand:init')
             .pipe(
                 switchMap((evt: Event) => {
                     const { color } = (evt as CustomEvent).detail;
+                    // color is a WriteableSignal<string> here
+                    // converting it to an observable
                     return toObservable(color);
                 })
             )
